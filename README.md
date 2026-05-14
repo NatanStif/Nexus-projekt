@@ -156,9 +156,9 @@ _misija["akcije"].append(akcija)_
   
 * **Problem možemo rješiti definiranjem parametra prilikom učitavanja datoteka.**
 
-_df_lokacije = pd.read_csv("moji_mars_podaci/mars_lokacije.csv", sep=";", decimal=",")_
+_df_lokacije = pd.read_csv("data/mars_lokacije.csv", sep=";", decimal=",")_
 
-_df_uzorci   = pd.read_csv("moji_mars_podaci/mars_uzorci.csv",   sep=";", decimal=",")_
+_df_uzorci   = pd.read_csv("data/mars_uzorci.csv",   sep=";", decimal=",")_
 
 **2. Neispravno prikazivanje satelitske slike**
 
@@ -169,3 +169,14 @@ _df_uzorci   = pd.read_csv("moji_mars_podaci/mars_uzorci.csv",   sep=";", decima
 _extent_koordinate = [df_fitrirano['GPS_LONG'].min(), df_fitrirano['GPS_LONG'].max(), df_filtrirano['GPS_LAT'].min(), df_filtrirano['GPS_LAT'].max()]_
 
 ---
+## F. Inženjerski izazov (Bonus za napredne)
+
+* **Program _prosjecna_temp.py_ je program za izračunavanje aritmetičke sredine temperature tla, koju smo dobili iz liste _df_filtrirano_.**
+
+* **Pomoću funkcije mean() smo izvukli aritmetičku sredinu stupca _"Temp_Tla_C"_.**
+
+_prosjek = df_filtrirano["Temp_Tla_C"].mean()_
+
+* **Taj podatak je ispisat i zaokružen na dvije decimale.**
+
+_print(f"Prosjek = {round(prosjek,2)}°C")_
