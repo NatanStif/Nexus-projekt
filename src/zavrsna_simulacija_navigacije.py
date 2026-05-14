@@ -5,8 +5,8 @@ import json
 import requests
 
 
-df_lokacije = pd.read_csv("moji_mars_podaci/mars_lokacije.csv", sep = ";", decimal = ",")
-df_uzorci = pd.read_csv("moji_mars_podaci/mars_uzorci.csv", sep = ";", decimal = ",")
+df_lokacije = pd.read_csv("data/mars_lokacije.csv", sep = ";", decimal = ",")
+df_uzorci = pd.read_csv("data/mars_uzorci.csv", sep = ";", decimal = ",")
 
 
 df_spojeno = pd.merge(
@@ -37,7 +37,7 @@ plt.xlabel('Temperatura')
 plt.ylabel('Vlaga')
 
 # Spremanje datoteke
-plt.savefig('graph1_temp_h2o.png')
+plt.savefig('assets/graph1_temp_h2o.png')
 plt.show()
 
 
@@ -61,7 +61,7 @@ plt.xlabel('Geografska dužina')
 plt.ylabel('Geografska širina')
 
 # Spremanje datoteke
-plt.savefig('graph2_heatmap_depth.png')
+plt.savefig('assets/graph2_heatmap_depth.png')
 plt.show()
 
 # 3.
@@ -79,7 +79,7 @@ plt.xlabel('Geografska dužina')
 plt.ylabel('Geografska širina')
 
 # Spremanje datoteke
-plt.savefig('graph3_methane_scatter.png')
+plt.savefig('assets/graph3_methane_scatter.png')
 plt.show()
 
 # 4.
@@ -111,7 +111,7 @@ plt.ylabel('Geografska širina')
 
 # Spremanje datoteke
 
-plt.savefig('graph4_scatter_plot.png')
+plt.savefig('assets/graph4_scatter_plot.png')
 plt.show()
 
 # Završna mapa misije (Satelitski prikaz Jezero Kratera)
@@ -156,7 +156,7 @@ plt.ylabel('Geografska širina')
 
 # Spremanje datoteke
 
-plt.savefig('graph5_jezero_mission_map.jpg')
+plt.savefig('assets/graph5_jezero_mission_map.jpg')
 plt.close()
 
 
