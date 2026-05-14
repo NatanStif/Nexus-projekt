@@ -19,4 +19,7 @@ ukupna_temp = 0
 
 
 for i in range(0,len(df_filtrirano)):
-  ukupna_temp = 
+    ukupna_temp += df_filtrirano["Temp_Tla_C"][i]
+
+
+print(ukupna_temp/len(df_filtrirano))
